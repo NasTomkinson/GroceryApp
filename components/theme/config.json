@@ -23,6 +23,7 @@
         "secondary-light": "#86efac",
         "black": "#0a0a0a",
         "white": "#fafafa",
+        "neutral": "#cccccc",
         "error": "#ef4444",
         "attention": "#60a5fa",
         "warning": "#fef08a",

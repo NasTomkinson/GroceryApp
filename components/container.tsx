@@ -2,8 +2,8 @@ import { View, ScrollView, StyleSheet } from 'react-native';
 
 interface ContainerProps {
     children: React.ReactNode,
-    scrollable: Boolean,
-    style: Object
+    scrollable?: Boolean,
+    style?: Object
 }
 
 export default function Container ({children, scrollable, style}: ContainerProps) {
@@ -11,9 +11,9 @@ export default function Container ({children, scrollable, style}: ContainerProps
     const El = scrollable ? ScrollView : View
 
     return (
-        <El style={[styles.container, style]}>
+        <ScrollView  style={[styles.container, style]} contentContainerStyle={{ flexGrow: 1, flex: 1 }}>
             {children}
-        </El>
+        </ScrollView >
     )
 }
 

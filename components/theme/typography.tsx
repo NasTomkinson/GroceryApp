@@ -5,13 +5,13 @@ const fonts = config.fonts
 
 interface ThemedTextProps {
     children: any,
-    family: 'primary' | 'secondary',
-    size: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl',
+    family?: 'primary' | 'secondary',
+    size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl',
     weight?: 300 | 400 | 500 | 600 | 700,
-    style?: String
+    style?: Obejct
 }
 
-export default function ThemedText ({ children, family, size, weight, style }: ThemedTextProps) {
+export default function ThemedText ({ children, family = 'primary', size = 'base', weight, style }: ThemedTextProps) {
 
     return (
         <Text style={[styles[family], styles[size], {fontWeight: weight, ...style}]}> { children } </Text>
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
         fontSize: fonts.sizes.sm
     },
     base: {
-        fontSize: fonts.sizes.base
+        fontSize: fonts.sizes.base,
+        lineHeight: '1.4'
     },
     lg: {
         fontSize: fonts.sizes.lg
