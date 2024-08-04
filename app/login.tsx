@@ -19,8 +19,8 @@ export default function Login () {
                     <Text style={styles.formTitle}> 
                         Login 
                     </Text>
-                    <ThemedInput label="Email Address" name="emailAddress" placeholder="Email Address" inputMode="email" />
-                    <ThemedInput label="Password" name="password" placeholder="Password" secureTextEntry={true} />
+                    <ThemedInput label="Email Address" placeholder="Email Address" inputMode="email" />
+                    <ThemedInput label="Password" placeholder="Password" secureTextEntry={true} />
 
                     <ThemedButton 
                         title="Login"

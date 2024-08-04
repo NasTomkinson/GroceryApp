@@ -2,15 +2,16 @@ import { View, ScrollView, StyleSheet } from 'react-native';
 
 interface ContainerProps {
     children: React.ReactNode,
-    scollable: Boolean
+    scrollable: Boolean,
+    style: Object
 }
 
-export default function Container ({children, scrollable}: ContainerProps) {
+export default function Container ({children, scrollable, style}: ContainerProps) {
 
     const El = scrollable ? ScrollView : View
 
     return (
-        <El style={styles.container}>
+        <El style={[styles.container, style]}>
             {children}
         </El>
     )
@@ -18,10 +19,6 @@ export default function Container ({children, scrollable}: ContainerProps) {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-        alignItems: 'stretch',
         paddingStart: 16,
         paddingEnd: 16
     }

@@ -1,0 +1,11 @@
+query GetRecipes {
+    recipes {
+        data {
+            id
+            attributes {
+                title
+                slug
+            }
+        }
+    }
+}

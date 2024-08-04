@@ -6,7 +6,9 @@
       "@/*": [
         "./*"
       ],
-      "@components/*": ["./components/*"]
+      "@components/*": ["./components/*"],
+      "@utils/*": ["./utils/*"],
+      "@graphql/*": ["./graphql/*"]
     }
   },
   "include": [
